@@ -14,7 +14,7 @@ int main()
 	printf("\n----------------------\nWybierz jedna z opcji:\n\n1 - Dodawanie\n2 - Odejmowanie\n3 - Mnozenie\n4 - Dzielenie \nPozostale - Wyjscie\n----------------------\n");
 
 	do
-	{	
+	{
 		printf("\nWybierz dowolna opcje z menu: ");
 		scanf_s("%d", &znak);
 
@@ -59,4 +59,4 @@ int main()
 	return 0;
 }
 
-//Copyright MichalJanikUR. Wszelkie prawa zastrze¿one.
+//Copyright MichalJanikUR®. Wszelkie prawa zastrzezone. All rights reserved.

@@ -12,8 +12,8 @@ int main()
 	if(a > b) printf("Liczba a jest wieksza od b!\n");
 	else if(a == b) printf("Liczby a i b sa sobie rowne!\n");
 	else printf("Liczba b jest wieksza od a!\n");
-	
+
 	return 0;
 }
 
-//Copyright MichalJanikUR. Wszelkie prawa zastrze¿one.
+//Copyright MichalJanikUR®. Wszelkie prawa zastrzezone. All rights reserved.
