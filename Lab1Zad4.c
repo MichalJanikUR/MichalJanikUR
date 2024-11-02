@@ -21,4 +21,4 @@ int main()
 	return 0;
 }
 
-//Copyright MichalJanikUR®. Wszelkie prawa zastrzezone. All rights reserved.
+//Copyright MichalJanikURÅ½. Wszelkie prawa zastrzezone. All rights reserved.
