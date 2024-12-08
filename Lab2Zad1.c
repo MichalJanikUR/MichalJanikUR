@@ -27,7 +27,7 @@ int main()
 		printf("Srednia: %f\n", srednia);
 		printf("Wartosc max: %d\n", max);
 	}
-	else printf("Nie wprowadzono zadnych licb dodatnich");
+	else printf("Nie wprowadzono zadnych liczb dodatnich");
 
 	return 0;
 }
