@@ -1,4 +1,4 @@
-#include <cmath>
+#include <math.h>
 #include <stdio.h>
 
 // zad 1 - silnia z n

@@ -3,6 +3,8 @@
 
 int main() {
 
+	//printf("Hello world!");
+
 	// zad 1 - silnia z n
 
 	printf("silnia(1) = %d", silnia(1));
@@ -14,13 +16,11 @@ int main() {
 	printf("\n\n");
 
 	//zad 2 - n-ty wyraz ciagu
-
 	printf("wyraz ciagu dla 5: %d", wc(5));
 
 	printf("\n\n");
 
 	// zad 3 - nwd(algorytnem Euklidesa)
-
 	printf("nwd(75, 100): %d", nwd(75, 100));
 
 	printf("\n\n");
