@@ -1,4 +1,3 @@
-#include <math.h>
 #include <stdio.h>
 
 // zad 1 - silnia z n
@@ -14,7 +13,7 @@ int wc(int n) {
 	else if (n > 1) return (-wc(n - 1) * n) - 2;
 }
 
-// zad 3 - nwd (algorytnem Euklidesa)
+// zad 3 - nwd (algorytmem Euklidesa)
 int nwd(int a, int b)
 {
 	if (b == 0) return a;
