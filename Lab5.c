@@ -25,7 +25,7 @@ int main() {
 
 	printf("\n\n");
 
-	// zad 6 - ci¹g Fibonacciego
+	// zad 6 - ciÅ¡g Fibonacciego
 
 	printf("fib(0): %d", fib(0));
 
@@ -39,7 +39,7 @@ int main() {
 
 	printf("\n\n");
 
-	// zad 5 (tak jak 7) - zamiana liczby dziesiêtnej na binarn¹
+	// zad 5 (tak jak 7) - zamiana liczby dziesiÄ™tnej na binarnÅ¡
 
 	printf("-5 na bin: ");
 	dec2bin(-5);
