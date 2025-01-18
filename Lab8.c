@@ -18,10 +18,10 @@ int is_valid_pesel(const char* pesel) {
 
 	for (int i = 0; i < 10; i++) {
 		int digit = pesel[i] - '0'; // Konwersja z char na int
-		sum += digit * weights[i]; // Dodaj iloczyn cyfry i mno¿nika
+		sum += digit * weights[i]; // Dodaj iloczyn cyfry i mnoÅ¼nika
 	}
 
-	// Dodaj ostatni¹ cyfrê (kontroln¹)
+	// Dodaj ostatniÄ… cyfrÄ™ (kontrolnÄ…)
 	int control_digit = pesel[10] - '0';
 	sum += control_digit;
 
@@ -57,7 +57,7 @@ void RunZadanie1()
 
 	fclose(inputFile); //zamkniecie pliku promienie.txt
 
-	//obliczanie pól
+	//obliczanie pÃ³l
 
 	for (int i = 0; i < 2; i++)
 	{
@@ -108,7 +108,7 @@ void RunZadanie2()
 		return 1;
 	}
 
-	// tworzenie nowego pliku do zapisu wyników
+	// tworzenie nowego pliku do zapisu wynikÃ³w
 	FILE* outputFile = fopen("wynik1.txt", "w");
 	if (outputFile == NULL) {
 		printf("Nie mozna utworzyc pliku wynik1.txt");
@@ -118,13 +118,13 @@ void RunZadanie2()
 
 	int number;
 	while (fscanf(inputFile, "%d", &number) == 1) {
-		int lastDigit = number % 10; // pobranie cyfry jednoœci
+		int lastDigit = number % 10; // pobranie cyfry jednoÅ›ci
 		if (lastDigit == 0 || lastDigit == 3 || lastDigit == 8 || lastDigit == 9) {
 			fprintf(outputFile, "%d\n", number); // zapis liczby do wynik.txt
 		}
 	}
 
-	// zamkniêcie plików
+	// zamkniÄ™cie plikÃ³w
 	fclose(inputFile);
 	fclose(outputFile);
 
@@ -152,14 +152,14 @@ void RunZadanie4()
 
 	// Wczytaj numery PESEL z pliku
 	while (count < MAX_PESEL && fgets(pesel[count], sizeof(pesel[count]), input_file)) {
-		pesel[count][strcspn(pesel[count], "\n")] = '\0'; // Usuñ znak nowej linii
+		pesel[count][strcspn(pesel[count], "\n")] = '\0'; // UsuÅ„ znak nowej linii
 		if (strlen(pesel[count]) != 11) {
-			continue; // Pomijamy b³êdne numery
+			continue; // Pomijamy bÅ‚Ä™dne numery
 		}
 		count++;
 	}
 
-	// 4.1: Liczba kobiet i mê¿czyzn
+	// 4.1: Liczba kobiet i mÄ™Å¼czyzn
 	int women_count = 0, men_count = 0;
 	for (int i = 0; i < count; i++) {
 		int gender_digit = pesel[i][9] - '0';
@@ -172,7 +172,7 @@ void RunZadanie4()
 	}
 	fprintf(output_file, "4.1\nKobiety: %d\nMezczyzni: %d\n\n", women_count, men_count);
 
-	// 4.2: Liczba osób urodzonych w listopadzie
+	// 4.2: Liczba osÃ³b urodzonych w listopadzie
 	int november_count = 0;
 	for (int i = 0; i < count; i++) {
 		int month = (pesel[i][2] - '0') * 10 + (pesel[i][3] - '0');
@@ -182,7 +182,7 @@ void RunZadanie4()
 	}
 	fprintf(output_file, "4.2\nUrodzeni w listopadzie: %d\n\n", november_count);
 
-	// 4.3: B³êdne numery PESEL
+	// 4.3: BÅ‚Ä™dne numery PESEL
 	fprintf(output_file, "4.3\nBledne numery PESEL:\n");
 	for (int i = 0; i < count; i++) {
 		if (!is_valid_pesel(pesel[i])) {
@@ -216,14 +216,14 @@ int main(int argc, char* argv[])
 	const char* input_file = argv[1];
 	const char* output_file = argv[2];
 
-	// Otwieranie pliku wejœciowego
+	// Otwieranie pliku wejÅ›ciowego
 	FILE* input = fopen(input_file, "r");
 	if (input == NULL) {
 		printf("Nie mozna otworzyc pliku wejsciowego");
 		return 1;
 	}
 
-	// Otwieranie pliku wyjœciowego
+	// Otwieranie pliku wyjÅ›ciowego
 	FILE* output = fopen(output_file, "w");
 	if (output == NULL) {
 		printf("Nie mozna otworzyc pliku wyjsciowego");
@@ -234,15 +234,15 @@ int main(int argc, char* argv[])
 	int char_count = 0;
 	int ch;
 
-	// Zliczanie znaków i kopiowanie zawartoœci
+	// Zliczanie znakÃ³w i kopiowanie zawartoÅ›ci
 	while ((ch = fgetc(input)) != EOF) {
 		char_count++;
 	}
 
-	// Dodanie liczby znaków na koñcu pliku wyjœciowego
+	// Dodanie liczby znakÃ³w na koÅ„cu pliku wyjÅ›ciowego
 	fprintf(output, "Liczba znakow w pliku: %d\n", char_count);
 
-	// Zamkniêcie plików
+	// ZamkniÄ™cie plikÃ³w
 	fclose(input);
 	fclose(output);
 
